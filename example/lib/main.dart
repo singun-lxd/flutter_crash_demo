@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'dart:async';
 
@@ -21,7 +22,9 @@ class _MyAppState extends State<MyApp> {
 
   // Platform messages are asynchronous, so we initialize in an async method.
   Future<void> initPlatformState() async {
-
+    if (kDebugMode) {
+      await Future.delayed(Duration(milliseconds: 800));
+    }
     await FlutterCrashDemo().initialize();
     await FlutterCrashDemo().runInBackground(_onBackgroundCall);
 
