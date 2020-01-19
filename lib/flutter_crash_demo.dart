@@ -1,7 +1,5 @@
 import 'dart:async';
 
-import 'package:flutter/services.dart';
-
 import 'crash_reproducer.dart';
 
 abstract class FlutterCrashDemo {
